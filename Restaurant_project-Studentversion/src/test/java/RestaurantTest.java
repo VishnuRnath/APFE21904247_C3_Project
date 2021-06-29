@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,6 +41,31 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //<<<<<<<<<<<<<<<<<<<<CALCULATE MENU PRICE>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void calculate_menu_price_with_menu_list_with_one_item_in_menu_selected_must_return_amount(){
+        createRestaurantAndMenu();
+
+        List<String> selectedItems = new ArrayList<String>();
+        selectedItems.add("Vegetable lasagne");
+
+        int price = 269;
+        assertEquals(restaurant.getOrderValue(selectedItems),price);
+    }
+
+
+
+    @Test
+    public void calculate_menu_price_with_menu_list_with_no_item_selected_must_return_zero(){
+
+        createRestaurantAndMenu();
+
+        List<String> selectedItems = new ArrayList<String>();
+
+        int price = 0;
+        assertEquals(restaurant.getOrderValue(selectedItems),price);
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test

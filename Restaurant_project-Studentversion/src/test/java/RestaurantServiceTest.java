@@ -42,22 +42,6 @@ class RestaurantServiceTest {
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-    //<<<<<<<<<<<<<<<<<<<<CALCULATE MENU PRICE>>>>>>>>>>>>>>>>>>>>
-    @Test
-    public void calculate_menu_price_with_menu_list_with_one_item_in_menu_selected_must_return_amount(){
-
-
-    }
-
-
-
-    @Test
-    public void calculate_menu_price_with_menu_list_with_no_item_selected_must_return_zero(){
-
-    }
-    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
     //>>>>>>>>>>>>>>>>>>>>>>ADMIN: ADDING & REMOVING RESTAURANTS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void remove_restaurant_should_reduce_list_of_restaurants_size_by_1() throws restaurantNotFoundException {

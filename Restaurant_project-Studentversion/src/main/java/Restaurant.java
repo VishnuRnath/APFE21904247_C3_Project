@@ -64,5 +64,13 @@ public class Restaurant {
         return name;
     }
 
-
+    public int getOrderValue(List<String> items){
+        int amount = 0;
+        for(Item food : menu){
+            if(items.contains(food.getName())){
+                amount += food.getPrice();
+            }
+        }
+        return amount;
+    }
 }
